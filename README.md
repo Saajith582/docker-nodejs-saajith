@@ -1,38 +1,31 @@
-# Projekt-Dokumentation & Installationsanleitung
+# Node.js App mit Docker
 
-Diese Dokumentation bietet eine ausführliche, schrittweise Anleitung zur Einrichtung, Konfiguration und zum Starten der Node.js-Anwendung mithilfe von Docker sowie zur Nutzung in Visual Studio Code.
-
----
-
-## 1. Einbindung in Visual Studio Code (Anleitung)
-
-1. Öffne den geklonten Projektordner in **VS Code** (`Datei` -> `Ordner öffnen...`).
-2. Erstelle im Hauptverzeichnis des Projekts eine neue Datei namens `README.md`.
-3. Kopiere diesen gesamten Inhalt in die Datei und speichere sie (`Strg + S` bzw. `Cmd + S`).
-4. **Tipp:** Drücke `Strg + K, V` (oder klicke oben rechts auf das Vorschau-Symbol), um das Dokument formatiert anzuzeigen.
+Anleitung zur Installation und Ausführung des Projekts
 
 ---
 
-## 2. Prerequisites (Voraussetzungen)
+## Installation des Projekts
 
-Bevor du mit der Installation beginnst, stelle sicher, dass folgende Software auf deinem System installiert ist und ordnungsgemäß funktioniert:
+### 1. Klonen des Repositories
+Lade den Quellcode von GitHub auf deinen Computer herunter und wechsle in den Projektordner.
 
-1. **Git**: Zum Klonen des Quellcodes ([Git Herunterladen](https://git-scm.com/)).
-2. **Node.js & npm**: Zur Verwaltung der JavaScript-Pakete ([Node.js Herunterladen](https://nodejs.org/)).
-3. **Docker Desktop**: Zur Ausführung der Anwendung in Containern ([Docker Desktop Herunterladen](https://www.docker.com/products/docker-desktop/)).
-   > **Wichtig:** Docker Desktop muss während der gesamten Ausführung gestartet sein und im Hintergrund laufen.
+### 2. Installation der notwendigen Pakete
+Installiere alle benötigten Node.js-Abhängigkeiten für das Projekt.
+
+### 3. Docker-Konfiguration und -Installation
+Stelle sicher, dass **Docker Desktop** auf deinem Rechner installiert ist und läuft. Die Konfigurationsdateien (`Dockerfile` und `compose.yaml`) sind bereits im Projekt enthalten.
+
+### 4. Starten der Applikation in einem Docker-Container
+Starte den Docker-Container und öffne die Anwendung im Browser unter `http://localhost:3000`.
 
 ---
 
-## 3. Schritt-für-Schritt-Installation
+## Alle Befehle auf einen Blick
 
-### Schritt 1: Repository klonen (Quellcode herunterladen)
-
-Öffne das Terminal in VS Code (`Terminal` -> `Neues Terminal`) und führe folgende Befehle aus:
+Kopiere diese Befehle und führe sie nacheinander im VS Code Terminal (`Strg + J` oder `Terminal -> Neues Terminal`) aus:
 
 ```bash
-# 1. Klonen des Repositories von GitHub auf deinen lokalen Rechner
 git clone [https://github.com/Saajith582/docker-nodejs-saajith.git](https://github.com/Saajith582/docker-nodejs-saajith.git)
-
-# 2. Wechseln in das neu erstellte Projektverzeichnis
 cd docker-nodejs-saajith
+npm install
+docker compose up --build
